@@ -7,6 +7,7 @@ import routes from "./routes/index.js";
 import { config } from "dotenv";
 import { sequelize } from "./database/database.js";
 import http from "http"
+import responseTime from "response-time";
 
 import fs from "fs";
 import path from "path";
@@ -29,6 +30,8 @@ const io = new Server(server, {
 });
 
 io.on("connect",socket => {});
+
+app.use(responseTime())
 
 app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
 app.use(cors());

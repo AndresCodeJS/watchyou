@@ -5,7 +5,7 @@ import { saveCart } from "../controllers/cart/saveCart.js";
 const router = Router();
 
 
-router.post("/save", saveCart);
+router.get("/save", saveCart);
 
 
 
