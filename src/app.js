@@ -18,7 +18,7 @@ import { Server } from "socket.io";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 config();
-const app = express();
+export const app = express();
 
 const server = http.createServer(app);
 
